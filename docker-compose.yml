@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SERVER_ADDRESS: "0.0.0.0"
+    # H2 em memória - dados não persistem entre restarts.
+    # API: http://localhost:8080 | Swagger: http://localhost:8080/swagger-ui.html | H2 Console: http://localhost:8080/h2-console
